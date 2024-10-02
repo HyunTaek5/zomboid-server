@@ -201,7 +201,7 @@ jobs:
 
       - name: Upload Docker Logs
         if: ${{ always() }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: docker-logs-${{ matrix.system }}
           path: |
@@ -209,7 +209,7 @@ jobs:
 
       - name: Upload Server Configuration
         if: ${{ always() }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: server-configs-${{ matrix.system }}
           path: |
